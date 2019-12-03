@@ -1,0 +1,23 @@
+.bg-theme{
+  background-color:#218F76;
+}
+
+.cart-icon{
+  width:20px;
+}
+
+.hero-background{
+  min-height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-background{
+  min-height: 30vh;
+}
+
+.service-background{
+  min-height: 30vh;
+}
