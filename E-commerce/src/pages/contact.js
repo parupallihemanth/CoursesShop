@@ -5,10 +5,9 @@ import SEO from "../components/seo"
 import { graphql} from 'gatsby'
 import HeroSection from '../components/Reuseable/HeroSection'
 import Infoblock from '../components/Reuseable/Infoblock'
-import DualInfoblock from '../components/Reuseable/DualInfoblock'
-import CourseCart from '../components/Cart/coursecart'
+import Contactus from '../components/Contact/contactus'
 
-const IndexPage = ({data}) => (
+const ContactPage = ({data}) => (
   <Layout>
       {/* <SEO title="Home" />
       <h1>Hi people</h1>
@@ -21,45 +20,24 @@ const IndexPage = ({data}) => (
 
       <HeroSection
       img = {data.img.childImageSharp.fluid}
-      title='I Write code'
-      subtitle='www.programminghub.in'
-      heroclass="hero-background"
+      title='Contact us'
+      
+      heroclass="about-background"
       />
 
-      <Infoblock heading="About us"/>
-      <CourseCart courses={data.courses} />
-      <DualInfoblock heading='Our team' />
+      <Infoblock heading="How can we help"/>
+      <Contactus />
       
   </Layout>
 )
 
 export const query = graphql`
     {
-      img: file(relativePath: { eq: "heromain.png" }) {
+      img: file(relativePath: { eq: "contact.png" }) {
         childImageSharp {
           fluid {
              ...GatsbyImageSharpFluid_tracedSVG 
     }
-  }
-}
-
-  courses:allContentfulCourses{
-    edges{
-      node{
-        id
-        title
-        price
-        category
-        description{
-          description
-        }
-        image{
-          fixed(width:200, height:120){
-            ...GatsbyContentfulFixed_tracedSVG
-          }
-        }
-      }
-    
   }
 }
 }
@@ -67,4 +45,4 @@ export const query = graphql`
 
 
 `
-export default IndexPage
+export default ContactPage

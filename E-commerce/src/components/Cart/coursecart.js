@@ -10,13 +10,13 @@ export default class coursecart extends Component {
         }
     }
     render() {
-         console.log(this.state.courses)
+        //  console.log(this.state.courses)
         return (
-            <section className="row col-md-8 mx-auto">
+            <section className="row col-md-8  mx-auto">
                 { this.state.courses.map( ({node}) =>{
                     return(
                         
-                        <div key={node.id} className="col-11 col-md-6 d-flex mx-auto">
+                        <div key={node.id} className="col-11 col-md-6 my-3 d-flex mx-auto">
                     <Img fixed = {node.image.fixed} />
                         <div className="flex-grow-1 px-3">
                         <div className= "d-flex justify-content-between">
